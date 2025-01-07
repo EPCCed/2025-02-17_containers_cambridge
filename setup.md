@@ -7,11 +7,7 @@ best learning experience:
 
 1. Create a Docker Hub account (if you do not already have one)
 2. Make sure you have a working installation of Docker Desktop or Docker on your laptop
-3. Make sure you have an account on a remote HPC system with Singularity/Apptainer installed. There are
-   a few options for this course:
-   1. Use an existing account on [BlueBEAR](https://www.birmingham.ac.uk/research/arc/bear/bluebear)
-   2. Use an existing account on [ARCHER2](https://www.archer2.ac.uk)
-   3. Create an account on ARCHER2 - details on how to do this are provided below
+3. Check you can login to the ARCHER2 account you created during course registration
 
 ## Create an account on Docker Hub
 
@@ -121,38 +117,11 @@ Server:
 
 The above output shows a successful installation and will vary based on your system.  The important part is that the "Client" and the "Server" parts are both working and returns information.  It is beyond the scope of this document to debug installation problems but common errors include the user not belonging to the `docker` group and forgetting to start a new terminal or ssh session.
 
-## Getting an account on ARCHER2
+## Check you can login to ARCHER2
 
-### Sign up for a SAFE account
-
-To sign up, you must first register for an account on [SAFE](https://safe.epcc.ed.ac.uk/) (our service administration web application):
-
-If you are already registered on the EPCC SAFE you do not need to re-register. Please proceed to the next step.
-
-1. Go to the [SAFE New User Signup Form](https://safe.epcc.ed.ac.uk/signup.jsp)
-2. Fill in your personal details. You can come back later and change them if you wish. _**Note:** you should register using your institutional or company email address - email domains such as gmail.com, outlook.com, etc. are not allowed to be used for access to ARCHER2_
-3. Click "Submit"
-4. You are now registered. A single use login link will be emailed to the email address you provided. You can use this link to login and set your password.
-
-### Sign up for an account on ARCHER2 through SAFE
-
-To login to ARCHER2 you will need an SSH key pair and a TOTP (usually generated from an app on your phone
-or laptop).
-
-The account signup process is easiest if you create an SSH key pair in advance so you can add it to your account when you create it. There is useful guidance on how to generate SSH key pairs in [the ARCHER2 documentation](https://docs.archer2.ac.uk/user-guide/connecting/#ssh-key-pairs).
-
-Once you have your key pair, follow the process to create an account on ARCHER2:
-
-1. [Login to SAFE](https://safe.epcc.ed.ac.uk)
-2. Go to the Menu "Login accounts" and select "Request login account"
-3. Choose the `ta142` project "Choose Project for Machine Account" box and click "Next"
-4.  Select the *ARCHER2* machine in the list of available machines
-5.  Click *Next*
-6.  Enter a username for the account and an SSH public key
-    1.  You can always add an SSH key (or additional SSH keys) after your account has been created.
-7.  Click *Request*
-
-Now you have to wait for the course organiser to accept your request to register. When this has happened,your account will be created on ARCHER2. Once this has been done, you should be sent an email. _If you have not received an email but believe that your account should have been activated, check your account status in SAFE which will also show when the account has been activated._
+As part of the course registration process, you will have created an account on ARCHER2. You should
+check you can successfully login to ARCHER2 using this account ahead of the course. To do this you will 
+first need to setup a TOTP (Time-base One Time Password).
 
 ### Setup TOTP on your ARCHER2 account
 
@@ -162,13 +131,13 @@ To log into ARCHER2, you will need to use a one time code as well as your SSH ke
 
 ### Log into ARCHER2
 
-You should now be able to log into ARCHER2 by following the [login instructions in the ARCHER2 documentation](https://docs.archer2.ac.uk/user-guide/connecting/) but using the login address `login4.archer2.ac.uk`. As noted above, in addition to the SSH key you should already have specified for the account, you will also need to register an autheticator app to generate TOTP for ARCHER2 login.
+You should now be able to log into ARCHER2 by following the [login instructions in the ARCHER2 documentation](https://docs.archer2.ac.uk/user-guide/connecting/). As noted above, in addition to the SSH key you should already have specified for the account, you will also need to register an autheticator app to generate TOTP for ARCHER2 login.
 
 Note, you will need three credentials the first time you log into ARCHER2: SSH key, MFA TOTP and one-shot password from SAFE. Once you have successfully logged in, you should never need to use a password again, your access will be via SSH key + TOTP.
 
 Step-by-step guide:
 
-1. Apply for an account and register SSH key (should already be done by following the instructions above)
+1. Apply for an account and register SSH key (should already be done as part of course registration)
 2. [Setup TOTP for your ARCHER2 account (should already be done by following the instructions above)](https://docs.archer2.ac.uk/user-guide/connecting/#mfa-time-based-one-time-passcode-totp-code)
 3. [Retrieve single use password from SAFE (first login only)](https://docs.archer2.ac.uk/user-guide/connecting/#first-login-password-required)
 
