@@ -6,7 +6,9 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 
 Times:
 - Monday 17 February 2025 10:00 - 15:30
-- Tueaday 18 February 2025 09:00 - 14:30
+- Tuesday 18 February 2025 09:00 - 14:30
+
+(Note: the timings in the schedule below do not reflect the earlier start time for day 2)
 
 Location:
 
