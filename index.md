@@ -18,7 +18,7 @@ JJ Thomson Avenue,<br/>
 Cambridge, CB3 0US
 
 
-Instructor: [Andy Turner (EPCC, University of Edinburgh)](https://www.epcc.ed.ac.uk/about-us/our-team/dr-andrew-turner)
+Instructor: [Andy Turner (EPCC, University of Edinburgh)](https://www.epcc.ed.ac.uk/about-us/our-team/dr-andrew-turner), [Jeremy Cohen (Imperial College)](https://profiles.imperial.ac.uk/jeremy.cohen)
 
 <hr/>
 
