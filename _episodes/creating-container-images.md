@@ -59,7 +59,7 @@ We can test our installation by running a Python command:
 ~~~
 {: .language-bash}
 
-Once Python is installed, we can add Python packages using the pip package installer:
+Once Python is installed, we can add further Python packages using the apk package installer:
 ~~~
 /# apk add cython
 ~~~
