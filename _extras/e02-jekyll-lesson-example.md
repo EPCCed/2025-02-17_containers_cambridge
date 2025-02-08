@@ -59,13 +59,13 @@ You can now request that a container is created that will compile the files in t
 
 For macOS, Linux and PowerShell:
 ~~~
-$ docker container run --rm -it --mount type=bind,source=${PWD},target=/srv/jekyll -p 127.0.0.1:4000:4000 jekyll/jekyll:3 jekyll serve
+$ docker container run --rm -it --mount type=bind,source=${PWD},target=/srv/jekyll -p 127.0.0.1:4000:4000 jekyll/jekyll:4.2.0 jekyll serve
 ~~~
 {: .language-bash}
 
 When I ran the macOS command, the output was as follows:
 ~~~
-Unable to find image 'jekyll/jekyll:3' locally
+Unable to find image 'jekyll/jekyll:4.2.0' locally
 3: Pulling from jekyll/jekyll
 9d48c3bd43c5: Pull complete 
 9ce9598067e7: Pull complete 
@@ -74,7 +74,7 @@ bfca09e5fd9a: Pull complete
 2612f15b9d22: Pull complete 
 322c093d5418: Pull complete 
 Digest: sha256:9521c8aae4739fcbc7137ead19f91841b833d671542f13e91ca40280e88d6e34
-Status: Downloaded newer image for jekyll/jekyll:3
+Status: Downloaded newer image for jekyll/jekyll:4.2.0
 
 ...output trimmed...
 
