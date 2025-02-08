@@ -116,7 +116,8 @@ episode_order:
   - creating-container-images
   - advanced-containers
   - d1-pm-break
-  - docker-image-examples
+  - jekyll-lesson-example
+  - reproducibility
   - singularity-gettingstarted
   - singularity-shell
   - d2-am-break
@@ -125,7 +126,6 @@ episode_order:
   - singularity-files
   - d2-lunch
   - singularity-blast
-  - reproducibility
   - d2-pm-break
   - singularity-mpi
   - advanced-topics
