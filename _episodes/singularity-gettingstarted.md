@@ -96,7 +96,7 @@ replace references to `singularity` with `apptainer`, if you wish.
 login address `login4.archer2.ac.uk`:
 
 ~~~
-ssh -i /path/to/ssh-key user@login4.archer2.ac.uk
+ssh -i /path/to/ssh-key user@login.archer2.ac.uk
 ~~~
 
 
