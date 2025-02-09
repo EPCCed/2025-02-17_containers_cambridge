@@ -27,19 +27,19 @@ First we need to get a copy of the website source to work with on your computer.
 In your shell window, in your `docker-intro` create a new directory `build-website` and `cd` into it. We will be expanding a ZIP file into this directory later. 
 
 Now open a web browser window and:
-1. Navigate to the [GitHub repository][docker-introduction repository] that contains the files for this session;
+1. Navigate to the [GitHub repository](https://github.com/EPCCed/2025-02-17_containers_cambridge) that contains the files for this session;
 2. Click the green "Clone or download" button on the right-hand side of the page;
 3. Click "Download ZIP".
-4. The downloaded ZIP file should contain one directory named `docker-introduction-gh-pages`.
-5. Move the `docker-introduction-gh-pages` folder into the `build-website` folder you created above.
+4. The downloaded ZIP file should contain one directory named `2025-02-17_containers_cambridge-gh-pages`.
+5. Move the `2025-02-17_containers_cambridge-gh-pages` folder into the `build-website` folder you created above.
 
 > ## There are many ways to work with ZIP files
-> Note that the last two steps can be achieved using a Mac or Windows graphical user interface. There are also ways to effect expanding the ZIP archive on the command line, for example, on my Mac I can achieve the effect of those last two steps through running the command `unzip ~/Downloads/docker-introduction-gh-pages.zip`.
+> Note that the last two steps can be achieved using a Mac or Windows graphical user interface. There are also ways to effect expanding the ZIP archive on the command line, for example, on my Mac I can achieve the effect of those last two steps through running the command `unzip 2025-02-17_containers_cambridge-gh-pages`.
 {: .callout}
 
-In your shell window, if you `cd` into the `docker-introduction-gh-pages` folder and list the files, you should see something similar to what I see:
+In your shell window, if you `cd` into the `2025-02-17_containers_cambridge-gh-pages` folder and list the files, you should see something similar to what I see:
 ~~~
-$ cd docker-introduction-gh-pages
+$ cd 2025-02-17_containers_cambridge-gh-pages 
 $ ls
 ~~~
 {: .language-bash}
@@ -95,9 +95,9 @@ To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
 
 In the preceding output, you see Docker downloading the container image for Jekyll, which is a tool for building websites from specification files such as those used for this lesson. The line `jekyll serve` indicates a command that runs within the Docker container instance. The output below that is from the Jekyll tool itself, highlighting that the website has been built, and indicating that there is a server running.
 
-Open a web browser window and visit the address <http://localhost:4000/>. You should see a site that looks very similar to that at <https://carpentries-incubator.github.io/docker-introduction/>.
+Open a web browser window and visit the address <http://localhost:4000/>. You should see a site that looks very similar to that at <https://epcced.github.io/2025-02-17_containers_cambridge/>.
 
-Using a new shell window, or using your laptop's GUI, locate the file `index.md` within the `docker-introduction-gh-pages` directory, and open it in your preferred editor program.
+Using a new shell window, or using your laptop's GUI, locate the file `index.md` within the `2025-02-17_containers_cambridge-gh-pages` directory, and open it in your preferred editor program.
 
 Near the top of this file you should see the description starting "This session aims to introduce the use of Docker containers with the goal of using them to effect reproducible computational environments." Make a change to this message, and save the file.
 
