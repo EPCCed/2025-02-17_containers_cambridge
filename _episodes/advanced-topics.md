@@ -1,5 +1,5 @@
 ---
-title: "(Optional) Additional topics and next steps"
+title: "Additional topics and next steps"
 teaching: 0
 exercises: 0
 questions:
@@ -12,6 +12,19 @@ objectives:
 keypoints:
 - "TBC"
 ---
+
+> ## Next steps with containers
+>
+> Now that we're at the end of the lesson material, take a moment to reflect on
+> what you've learned, how it applies to you, and what to do next.
+>
+> 1. In your own notes, write down or diagram your understanding of Singularity containers and container images:
+> concepts, commands, and how they work.
+> 2. In your own notes, write down how you think you might
+> use containers in your daily work. If there's something you want to try doing with
+> containers right away, what is a next step after this workshop to make that happen?
+>
+{: .challenge}
 
 ## Additional topics
 

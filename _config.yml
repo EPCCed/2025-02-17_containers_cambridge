@@ -126,6 +126,7 @@ episode_order:
   - singularity-files
   - d2-lunch
   - singularity-blast
+  - advanced-topics
   - d2-pm-break
   - singularity-mpi
-  - advanced-topics
+
