@@ -19,27 +19,32 @@ While Singularity doesn't actually run a container using the Docker container im
 For example, moving on from the simple _Hello World_ examples that we've looked at so far, let's pull one of the [official Docker Python container images](https://hub.docker.com/_/python). We'll use the image with the tag `3.9.6-slim-buster` which has Python 3.9.6 installed on Debian's [Buster](https://www.debian.org/releases/buster/) (v10) Linux distribution:
 
 ~~~
-remote$ singularity pull python-3.9.6.sif docker://python:3.9.6-slim-buster
+remote$ singularity pull python-3.13.2.sif docker://python:3.13.2-slim-bookworm
 ~~~
 {: .language-bash}
 
 ~~~
 INFO:    Converting OCI blobs to SIF format
+WARNING: 'nodev' mount option set on /tmp, it could be a source of failure during build process
 INFO:    Starting build...
 Getting image source signatures
-Copying blob 33847f680f63 done  
-Copying blob b693dfa28d38 done  
-Copying blob ef8f1a8cefd1 done  
-Copying blob 248d7d56b4a7 done  
-Copying blob 478d2dfa1a8d done  
-Copying config c7d70af7c3 done  
+Copying blob c29f5b76f736 done  
+Copying blob 91af2433aaf0 done  
+Copying blob 0d263a67e0db done  
+Copying blob 34abb9d38fa3 done  
+Copying config efb22c4342 done  
 Writing manifest to image destination
 Storing signatures
-2021/07/27 17:23:38  info unpack layer: sha256:33847f680f63fb1b343a9fc782e267b5abdbdb50d65d4b9bd2a136291d67cf75
-2021/07/27 17:23:40  info unpack layer: sha256:b693dfa28d38fd92288f84a9e7ffeba93eba5caff2c1b7d9fe3385b6dd972b5d
-2021/07/27 17:23:40  info unpack layer: sha256:ef8f1a8cefd144b4ee4871a7d0d9e34f67c8c266f516c221e6d20bca001ce2a5
-2021/07/27 17:23:40  info unpack layer: sha256:248d7d56b4a792ca7bdfe866fde773a9cf2028f973216160323684ceabb36451
-2021/07/27 17:23:40  info unpack layer: sha256:478d2dfa1a8d7fc4d9957aca29ae4f4187bc2e5365400a842aaefce8b01c2658
+2025/02/09 09:15:56  info unpack layer: sha256:c29f5b76f736a8b555fd191c48d6581bb918bcd605a7cbcc76205dd6acff3260
+2025/02/09 09:15:56  warn xattr{etc/gshadow} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2025/02/09 09:15:56  warn xattr{/tmp/build-temp-141758395/rootfs/etc/gshadow} destination filesystem does not support xattrs, further warnings will be suppressed
+2025/02/09 09:15:56  info unpack layer: sha256:91af2433aaf067a250607e067549a710adc587e7f5cf57c4ee096224cc5834dc
+2025/02/09 09:15:56  warn xattr{var/cache/apt/archives/partial} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2025/02/09 09:15:56  warn xattr{/tmp/build-temp-141758395/rootfs/var/cache/apt/archives/partial} destination filesystem does not support xattrs, further warnings will be suppressed
+2025/02/09 09:15:57  info unpack layer: sha256:0d263a67e0dbb841a730efc09f84672f73b02427a19a57d9ef380b66eaaf0aec
+2025/02/09 09:15:57  warn xattr{var/log/apt/term.log} ignoring ENOTSUP on setxattr "user.rootlesscontainers"
+2025/02/09 09:15:57  warn xattr{/tmp/build-temp-141758395/rootfs/var/log/apt/term.log} destination filesystem does not support xattrs, further warnings will be suppressed
+2025/02/09 09:15:57  info unpack layer: sha256:34abb9d38fa3fcf8526765f370a3f2c6341456eca879f3af027c42062521e5bc
 INFO:    Creating SIF file...
 ~~~
 {: .output}
@@ -48,24 +53,23 @@ Note how we see Singularity saying that it's "_Converting OCI blobs to SIF forma
 
 We can now run a container from this container image as we would with any other Singularity container image.
 
-> ## Running the Python 3.9.6 image that we just pulled from Docker Hub
+> ## Running a Python container based on the image that we just pulled from Docker Hub
 >
-> Try running the Python 3.9.6 container image. What happens?
+> Try running a Python container. What happens?
 > 
 > Try running some simple Python statements...
 > 
-> > ## Running the Python 3.9.6 image
+> > ## Running a Python container
 > >
 > > ~~~
-> > remote$ singularity run python-3.9.6.sif
+> > remote$ singularity run python-3.13.2.sif
 > > ~~~
 > > {: .language-bash}
 > > 
 > > This should put you straight into a Python interactive shell within the running container:
 > > 
 > > ~~~
-> > Python 3.9.6 (default, Jul 22 2021, 15:24:21) 
-> > [GCC 8.3.0] on linux
+> > Python 3.13.2 (main, Feb  6 2025, 22:37:50) [GCC 12.2.0] on linux
 > > Type "help", "copyright", "credits" or "license" for more information.
 > > >>> 
 > > ~~~
@@ -84,16 +88,16 @@ In addition to running a container and having it run the default run script, you
 
 > ## Open a shell within a Python container
 >
-> Try to run a shell within a singularity container based on the `python-3.9.6.sif` container image. That is, run a container that opens a shell rather than the default Python interactive console as we saw above.
+> Try to run a shell within a singularity container based on the Python container image. That is, run a container that opens a shell rather than the default Python interactive console as we saw above.
 > See if you can find more than one way to achieve this.
 > 
 > Within the shell, try starting the Python interactive console and running some Python commands.
 > 
 > > ## Solution
 > >
-> > Recall from the earlier material that we can use the `singularity shell` command to open a shell within a container. To open a regular shell within a container based on the `python-3.9.6.sif` container image, we can therefore simply run:
+> > Recall from the earlier material that we can use the `singularity shell` command to open a shell within a container. To open a regular shell within a container based on the `python-3.13.2.sif` container image, we can therefore run:
 > > ~~~
-> > remote$ singularity shell python-3.9.6.sif
+> > remote$ singularity shell python-3.13.2.sif
 > > ~~~
 > > {: .language-bash}
 > > 
@@ -104,8 +108,7 @@ In addition to running a container and having it run the default run script, you
 > > Debian GNU/Linux 10 \n \l
 > > 
 > > Singularity> python
-> > Python 3.9.6 (default, Jul 22 2021, 15:24:21) 
-> > [GCC 8.3.0] on linux
+> > Python 3.13.2 (main, Feb  6 2025, 22:37:50) [GCC 12.2.0] on linux
 > > Type "help", "copyright", "credits" or "license" for more information.
 > > >>> print('Hello World!')
 > > Hello World!
@@ -119,7 +122,7 @@ In addition to running a container and having it run the default run script, you
 > > It is also possible to use the `singularity exec` command to run an executable within a container. We could, therefore, use the `exec` command to run `/bin/bash`:
 > > 
 > > ~~~
-> > remote$ singularity exec python-3.9.6.sif /bin/bash
+> > remote$ singularity exec python-3.13.2.sif /bin/bash
 > > ~~~
 > > {: .language-bash}
 > > 
