@@ -167,7 +167,7 @@ A quick overview of what the above definition file is doing:
 > > Start a shell in the Singularity container based on your image and then run a single process job via `mpirun`:
 > > 
 > > ~~~
-> > $ singularity shell --contain osu_benchmarks.sif
+> > $ singularity shell --contain osu-benchmarks.sif
 > > Singularity> mpirun -np 1 osu_hello
 > > ~~~
 > > {: .language-bash}
